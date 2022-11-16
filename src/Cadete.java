@@ -18,6 +18,8 @@ public class Cadete implements IEmpleado{
 
     @Override
     public double calcularSueldoTotal(int diasAusente) {
-        return 0;
+        return calcularSueldoNeto() +
+                calcularBonoPorResultado() +
+                calcularBonoPorPresentismo(diasAusente);
     }
 }
